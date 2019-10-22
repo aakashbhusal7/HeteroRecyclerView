@@ -7,9 +7,9 @@ public class Model {
     public static final int IMAGE_TYPE=2;
 
 
-    public int type;
-    public int data;
-    public String text;
+    protected int type;
+    protected int data;
+    protected String text;
 
     public Model(int type,String text,int data){
         this.type=type;

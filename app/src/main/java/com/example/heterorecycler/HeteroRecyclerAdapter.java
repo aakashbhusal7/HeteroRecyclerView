@@ -106,6 +106,7 @@ public class HeteroRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vie
             switch (model.type){
                 case Model.TEXT_TYPE:
                     ((TextTypeViewHolder)holder).textView.setText(model.text);
+                    ((TextTypeViewHolder) holder).cardView.setBackgroundResource(R.color.colorAccent);
                     break;
                 case Model.IMAGE_TYPE:
                     ((ImageTypeViewHolder)holder).textView.setText(model.text);
@@ -121,14 +122,17 @@ public class HeteroRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vie
                                             if(mediaPlayer.isPlaying()){
                                                 mediaPlayer.stop();
                                             }
-                                            ((AudioTypeViewHolder)holder).floatingActionButton
+                                            ((AudioTypeViewHolder)holder).
+                                                    floatingActionButton
                                                     .setImageResource(R.drawable.volume);
                                         }
                                         else{
-                                            mediaPlayer=MediaPlayer.create(context,R.raw.sound);
+                                            mediaPlayer=MediaPlayer.create(context,
+                                                    R.raw.sound);
                                             mediaPlayer.setLooping(true);
                                             mediaPlayer.start();
-                                            ((AudioTypeViewHolder)holder).floatingActionButton
+                                            ((AudioTypeViewHolder)holder)
+                                                    .floatingActionButton
                                                     .setImageResource(R.drawable.mute);
                                             volume=true;
                                         }

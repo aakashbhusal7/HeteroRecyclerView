@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         models.add(new Model(Model.TEXT_TYPE,"TextView only",0));
         models.add(new Model(Model.IMAGE_TYPE,"ImageView",R.drawable.snow));
         models.add(new Model(Model.AUDIO_TYPE,"AudioView",R.raw.sound));
-        models.add(new Model(Model.IMAGE_TYPE,"ImageView",R.drawable.snow));
+        models.add(new Model(Model.IMAGE_TYPE,"ImageView",R.drawable.wtc));
 
         HeteroRecyclerAdapter heteroRecyclerAdapter=new HeteroRecyclerAdapter(models,this);
 
